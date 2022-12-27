@@ -233,6 +233,7 @@ ref:http://aleclownes.com/2017/02/01/crt-display.html
 		bottom: 100%;
 	}
 	100% {
-		bottom: -20%;
+		bottom: 0%;
+		display: none;
 	}
 }

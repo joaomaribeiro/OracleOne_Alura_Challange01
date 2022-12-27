@@ -17,7 +17,7 @@ var item = content.split(splits);
 var linhas  = item.length;
 element.innerHTML = "";
 var programa;
-var scrollTempo= 100;
+var scrollTempo= 300;
 var programaSelecao;
 
 
