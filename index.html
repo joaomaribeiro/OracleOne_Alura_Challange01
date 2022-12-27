@@ -42,115 +42,177 @@
 					<br> PASSWORD: ************
 				<p>ESCOLHA UM PROGRAMA:</p>
 				<button type="button" id="clickDecoder" class="MenuButton" name="codificador"> *Codificador</button>
-				<a id="clickDecoder" class="MenuButton"> *Decodificador</a>
+				<a id="MenuDecoder" class="MenuButton"> *Decodificador</a>
 
 			</div>
 			<main id="decoderMain">
 				<div id="dump">
-					
-
-Dec 19 10:09:53 svar systemd[1733]: Queued start job for default target Main User Target.<br>
-Dec 19 10:09:53 svar systemd[1733]: Created slice User Application Slice.<br>
-Dec 19 10:09:53 svar systemd[1733]: Reached target Paths.<br>
-Dec 19 10:09:53 svar systemd[1733]: Reached target Timers.<br>
-Dec 19 10:09:53 svar systemd[1733]: Starting D-Bus User Message Bus Socket...<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG network certificate management daemon.<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent (ssh-agent emulation).<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache.<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on p11-kit server.<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on PipeWire Multimedia System Socket.<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on Sound System.<br>
-Dec 19 10:09:53 svar systemd[1733]: Listening on D-Bus User Message Bus Socket.<br>
-Dec 19 10:09:53 svar systemd[1733]: Reached target Sockets.<br>
-Dec 19 10:09:53 svar systemd[1733]: Reached target Basic System.<br>
-Dec 19 10:09:53 svar systemd[1733]: Starting Update XDG user dir configuration...<br>
-Dec 19 10:09:53 svar systemd[1733]: Finished Update XDG user dir configuration.<br>
-Dec 19 10:09:53 svar systemd[1733]: Reached target Main User Target.<br>
-Dec 19 10:09:53 svar systemd[1733]: Startup finished in 158ms.<br>
-Dec 19 10:09:57 svar systemd[1733]: Created slice User Core Session Slice.<br>
-Dec 19 10:09:57 svar systemd[1733]: Starting D-Bus User Message Bus...<br>
-Dec 19 10:09:57 svar systemd[1733]: Started D-Bus User Message Bus.<br>
-Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.3' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
-Dec 19 10:09:58 svar systemd[1733]: Starting Accessibility services bus...<br>
-Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.a11y.Bus'<br>
-Dec 19 10:09:58 svar systemd[1733]: Started Accessibility services bus.<br>
-Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.5' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
-Dec 19 10:09:58 svar systemd[1733]: Starting Virtual filesystem service...<br>
-Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.gtk.vfs.Daemon'<br>
-Dec 19 10:09:58 svar systemd[1733]: Started Virtual filesystem service.<br>
-Dec 19 10:09:58 svar at-spi-bus-launcher[1869]: dbus-daemon[1869]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
-Dec 19 10:09:58 svar at-spi-bus-launcher[1869]: dbus-daemon[1869]: Successfully activated service 'org.a11y.atspi.Registry'<br>
-Dec 19 10:09:58 svar systemd[1733]: Starting Sound Service...<br>
-Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.blueman.Applet' unit='blueman-applet.service' requested by ':1.5' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
-Dec 19 10:09:58 svar at-spi-bus-launcher[1895]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry<br>
-Dec 19 10:09:58 svar systemd[1733]: Starting Bluetooth management applet...<br>
-Dec 19 10:09:59 svar blueman-applet[1898]: Unknown key gtk-applications-prefer-dark-theme in /home/tarhuntas/.config/gtk-3.0/settings.ini<br>
-Dec 19 10:09:59 svar blueman-applet[1898]: blueman-applet 10.09.59 WARNING  PluginManager:151 __load_plugin: Not loading DhcpClient because its conflict has higher priority<br>
-Dec 19 10:09:59 svar blueman-applet[1898]: blueman-applet 10.09.59 WARNING  PluginManager:151 __load_plugin: Not loading PPPSupport because its conflict has higher priority<br>
-Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.blueman.Applet'<br>
-Dec 19 10:09:59 svar systemd[1733]: Started Bluetooth management applet.<br>
-Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.bluez.obex' unit='dbus-org.bluez.obex.service' requested by ':1.10' (uid=1000 pid=1898 comm="/usr/bin/python /usr/bin/blueman-applet")<br>
-Dec 19 10:09:59 svar systemd[1733]: Starting Bluetooth OBEX service...<br>
-Dec 19 10:09:59 svar obexd[1917]: OBEX daemon 5.66<br>
-Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.bluez.obex'<br>
-Dec 19 10:09:59 svar systemd[1733]: Started Bluetooth OBEX service.<br>
-Dec 19 10:09:59 svar blueman-tray[1919]: Unknown key gtk-applications-prefer-dark-theme in /home/tarhuntas/.config/gtk-3.0/settings.ini<br>
-Dec 19 10:10:01 svar fcron[1950]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 1951)<br>
-Dec 19 10:10:01 svar pulseaudio[1887]: stat('/etc/pulse/default.pa.d'): No such file or directory<br>
-Dec 19 10:10:01 svar systemd[1733]: Started Sound Service.<br>
-Dec 19 10:10:01 svar pulseaudio[1887]: Could not find org.bluez.BatteryProviderManager1.RegisterBatteryProvider(), is bluetoothd started with experimental features enabled (-E flag)?<br>
-Dec 19 10:11:11 svar fcron[1950]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 10:11:11 svar fcron[1950]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 10:11:11 svar fcron[1950]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 10:16:52 svar systemd[1733]: Started PipeWire Multimedia Service.<br>
-Dec 19 10:16:52 svar systemd[1733]: Started PipeWire Media Session Manager.<br>
-Dec 19 10:16:52 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating service name='org.freedesktop.Notifications' requested by ':1.16' (uid=1000 pid=4551 comm="telegram-desktop")<br>
-Dec 19 10:17:52 svar plasma_waitforname[4599]: org.kde.knotifications: WaitForName: Service was not registered within timeout<br>
-Dec 19 10:17:52 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activated service 'org.freedesktop.Notifications' failed: Process org.freedesktop.Notifications exited with status 1<br>
-Dec 19 10:20:00 svar fcron[5889]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 5890)<br>
-Dec 19 10:21:07 svar fcron[5889]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 10:21:07 svar fcron[5889]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 10:21:07 svar fcron[5889]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 10:30:00 svar fcron[9385]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 9386)<br>
-Dec 19 10:30:00 svar fcron[9387]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 9388)<br>
-Dec 19 10:30:03 svar fcron[9385]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
-Dec 19 10:31:05 svar fcron[9387]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 10:31:05 svar fcron[9387]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 10:31:05 svar fcron[9387]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 10:40:00 svar fcron[12863]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 12864)<br>
-Dec 19 10:41:07 svar fcron[12863]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 10:41:07 svar fcron[12863]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 10:41:07 svar fcron[12863]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 10:50:00 svar fcron[15982]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 15983)<br>
-Dec 19 10:51:07 svar fcron[15982]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 10:51:07 svar fcron[15982]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 10:51:07 svar fcron[15982]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 11:00:00 svar fcron[19616]: Job '/home/tarhuntas/scripts/atualizar-omnia' started for user tarhuntas (pid 19617)<br>
-Dec 19 11:00:00 svar fcron[19618]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 19619)<br>
-Dec 19 11:00:00 svar fcron[19620]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 19622)<br>
-Dec 19 11:00:00 svar fcron[19616]: Job '/home/tarhuntas/scripts/atualizar-omnia' terminated (exit status: 128) (mailing output)<br>
-Dec 19 11:00:00 svar fcron[19616]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 11:00:00 svar fcron[19616]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 11:00:03 svar fcron[19618]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
-Dec 19 11:01:13 svar fcron[19620]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 11:01:13 svar fcron[19620]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 11:01:13 svar fcron[19620]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 11:10:00 svar fcron[23485]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 23486)<br>
-Dec 19 11:11:10 svar fcron[23485]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-Dec 19 11:11:10 svar fcron[23485]: Couldn't exec '/usr/bin/sendmail': No such file or directory<br>
-Dec 19 11:11:10 svar fcron[23485]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-Dec 19 11:20:00 svar fcron[27266]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 27267)<br>
-Dec 19 11:21:07 svar fcron[27266]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
-
-
-
-				</div>
+					Dec 19 10:09:53 svar systemd[1733]: Queued start job for default target Main User Target.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Created slice User Application Slice.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Reached target Paths.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Reached target Timers.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Starting D-Bus User Message Bus Socket...<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG network certificate management daemon.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent (ssh-agent emulation).<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on GnuPG cryptographic agent and passphrase cache.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on p11-kit server.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on PipeWire Multimedia System Socket.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on Sound System.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Listening on D-Bus User Message Bus Socket.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Reached target Sockets.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Reached target Basic System.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Starting Update XDG user dir configuration...<br>
+					Dec 19 10:09:53 svar systemd[1733]: Finished Update XDG user dir configuration.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Reached target Main User Target.<br>
+					Dec 19 10:09:53 svar systemd[1733]: Startup finished in 158ms.<br>
+					Dec 19 10:09:57 svar systemd[1733]: Created slice User Core Session Slice.<br>
+					Dec 19 10:09:57 svar systemd[1733]: Starting D-Bus User Message Bus...<br>
+					Dec 19 10:09:57 svar systemd[1733]: Started D-Bus User Message Bus.<br>
+					<!--Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.3' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
+					Dec 19 10:09:58 svar systemd[1733]: Starting Accessibility services bus...<br>
+					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.a11y.Bus'<br>
+					Dec 19 10:09:58 svar systemd[1733]: Started Accessibility services bus.<br>
+					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.5' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
+					Dec 19 10:09:58 svar systemd[1733]: Starting Virtual filesystem service...<br>
+					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.gtk.vfs.Daemon'<br>
+					Dec 19 10:09:58 svar systemd[1733]: Started Virtual filesystem service.<br>
+					Dec 19 10:09:58 svar at-spi-bus-launcher[1869]: dbus-daemon[1869]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
+					Dec 19 10:09:58 svar at-spi-bus-launcher[1869]: dbus-daemon[1869]: Successfully activated service 'org.a11y.atspi.Registry'<br>
+					Dec 19 10:09:58 svar systemd[1733]: Starting Sound Service...<br>
+					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.blueman.Applet' unit='blueman-applet.service' requested by ':1.5' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
+					Dec 19 10:09:58 svar at-spi-bus-launcher[1895]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry<br>
+					Dec 19 10:09:58 svar systemd[1733]: Starting Bluetooth management applet...<br>
+					Dec 19 10:09:59 svar blueman-applet[1898]: Unknown key gtk-applications-prefer-dark-theme in /home/tarhuntas/.config/gtk-3.0/settings.ini<br>
+					Dec 19 10:09:59 svar blueman-applet[1898]: blueman-applet 10.09.59 WARNING  PluginManager:151 __load_plugin: Not loading DhcpClient because its conflict has higher priority<br>
+					Dec 19 10:09:59 svar blueman-applet[1898]: blueman-applet 10.09.59 WARNING  PluginManager:151 __load_plugin: Not loading PPPSupport because its conflict has higher priority<br>
+					Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.blueman.Applet'<br>
+					Dec 19 10:09:59 svar systemd[1733]: Started Bluetooth management applet.<br>
+					Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.bluez.obex' unit='dbus-org.bluez.obex.service' requested by ':1.10' (uid=1000 pid=1898 comm="/usr/bin/python /usr/bin/blueman-applet")<br>
+					Dec 19 10:09:59 svar systemd[1733]: Starting Bluetooth OBEX service...<br>
+					Dec 19 10:09:59 svar obexd[1917]: OBEX daemon 5.66<br>
+					Dec 19 10:09:59 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.bluez.obex'<br>
+					Dec 19 10:09:59 svar systemd[1733]: Started Bluetooth OBEX service.<br>
+					Dec 19 10:09:59 svar blueman-tray[1919]: Unknown key gtk-applications-prefer-dark-theme in /home/tarhuntas/.config/gtk-3.0/settings.ini<br>
+					Dec 19 10:10:01 svar fcron[1950]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 1951)<br>
+					.<br>
+					.<br>
+					Dec 19 10:10:01 svar systemd[1733]: Started Sound Service.<br>
+					Dec 19 10:10:01 svar pulseaudio[1887]: Could not find org.bluez.BatteryProviderManager1.RegisterBatteryProvider(), is bluetoothd started with experimental features enabled (-E flag)?<br>
+					Dec 19 10:11:11 svar fcron[1950]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 10:11:11 svar fcron[1950]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 10:16:52 svar systemd[1733]: Started PipeWire Multimedia Service.<br>
+					Dec 19 10:16:52 svar systemd[1733]: Started PipeWire Media Session Manager.<br>
+					Dec 19 10:16:52 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating service name='org.freedesktop.Notifications' requested by ':1.16' (uid=1000 pid=4551 comm="telegram-desktop")<br>
+					Dec 19 10:17:52 svar plasma_waitforname[4599]: org.kde.knotifications: WaitForName: Service was not registered within timeout<br>
+					Dec 19 10:17:52 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activated service 'org.freedesktop.Notifications' failed: Process org.freedesktop.Notifications exited with status 1<br>
+					Dec 19 10:20:00 svar fcron[5889]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 5890)<br>
+					Dec 19 10:21:07 svar fcron[5889]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 10:21:07 svar fcron[5889]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 10:30:00 svar fcron[9385]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 9386)<br>
+					Dec 19 10:30:00 svar fcron[9387]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 9388)<br>
+					Dec 19 10:30:03 svar fcron[9385]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
+					Dec 19 10:31:05 svar fcron[9387]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 10:31:05 svar fcron[9387]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 10:40:00 svar fcron[12863]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 12864)<br>
+					Dec 19 10:41:07 svar fcron[12863]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 10:41:07 svar fcron[12863]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 10:50:00 svar fcron[15982]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 15983)<br>
+					Dec 19 10:51:07 svar fcron[15982]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 10:51:07 svar fcron[15982]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:00:00 svar fcron[19616]: Job '/home/tarhuntas/scripts/atualizar-omnia' started for user tarhuntas (pid 19617)<br>
+					Dec 19 11:00:00 svar fcron[19618]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 19619)<br>
+					Dec 19 11:00:00 svar fcron[19620]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 19622)<br>
+					Dec 19 11:00:00 svar fcron[19616]: Job '/home/tarhuntas/scripts/atualizar-omnia' terminated (exit status: 128) (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:00:00 svar fcron[19616]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:00:03 svar fcron[19618]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
+					Dec 19 11:01:13 svar fcron[19620]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:01:13 svar fcron[19620]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:10:00 svar fcron[23485]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 23486)<br>
+					Dec 19 11:11:10 svar fcron[23485]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:11:10 svar fcron[23485]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:20:00 svar fcron[27266]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 27267)<br>
+					Dec 19 11:21:07 svar fcron[27266]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:21:07 svar fcron[27266]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:30:00 svar fcron[31075]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 31076)<br>
+					Dec 19 11:30:00 svar fcron[31077]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 31079)<br>
+					Dec 19 11:30:03 svar fcron[31075]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
+					Dec 19 11:31:13 svar fcron[31077]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:31:13 svar fcron[31077]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:40:00 svar fcron[34427]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 34428)<br>
+					Dec 19 11:41:06 svar fcron[34427]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					Dec 19 11:41:06 svar fcron[34427]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 11:50:00 svar fcron[37929]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 37930)<br>
+					Dec 19 11:51:07 svar fcron[37929]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.
+					Dec 19 11:51:07 svar fcron[37929]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 12:00:00 svar fcron[42054]: Job '/home/tarhuntas/scripts/atualizar-omnia' started for user tarhuntas (pid 42055)<br>
+					Dec 19 12:00:00 svar fcron[42056]: Job '/home/tarhuntas/scripts/update-ip' started for user tarhuntas (pid 42057)<br>
+					Dec 19 12:00:00 svar fcron[42058]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 42062)<br>
+					Dec 19 12:00:00 svar fcron[42054]: Job '/home/tarhuntas/scripts/atualizar-omnia' terminated (exit status: 128) (mailing output)<br>
+					Dec 19 12:00:00 svar fcron[42054]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 12:00:03 svar fcron[42056]: Job '/home/tarhuntas/scripts/update-ip' completed<br>
+					Dec 19 12:01:15 svar fcron[42058]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					Dec 19 12:01:15 svar fcron[42058]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 12:10:00 svar fcron[45680]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 45681)<br>
+					Dec 19 12:11:02 svar fcron[45680]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					.<br>
+					.<br>
+					.<br>
+					.<br>
+					.<br>
+					Dec 19 12:11:02 svar fcron[45680]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 12:20:00 svar fcron[49027]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 49028)<br>
+					Dec 19 12:21:02 svar fcron[49027]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
+					Dec 19 12:21:02 svar fcron[49027]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
+					Dec 19 12:23:46 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating service name='org.freedesktop.Notifications' requested by ':1.34' (uid=1000 pid=51008 comm="/usr/lib/brave-bin/brave --enable-crashpad")<br> -->
+				</div><!-- end of dump -->
 				
-				<label for="encoder" style="top-margin:1600px">Review of Small rocks:</label>
-				<textarea id="codificador" name="encoder" rows="4" cols="50"></textarea>
+				<section id="codificadorPrograma" class="invisible textshadow">
+					<h3 class="asciiChar">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.___.__&nbsp;&nbsp;_____.__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.___&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+						&nbsp;&nbsp;____&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;__|&nbsp;_/|__|/&nbsp;____\__|&nbsp;____&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__|&nbsp;_/___________&nbsp;&nbsp;_____&nbsp;&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;__&nbsp;______________&nbsp;&nbsp;&nbsp;<br>
+						_/&nbsp;___\/&nbsp;&nbsp;_&nbsp;\&nbsp;/&nbsp;__&nbsp;|&nbsp;|&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;__\|&nbsp;&nbsp;|/&nbsp;___\\__&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;/&nbsp;__&nbsp;|/&nbsp;&nbsp;_&nbsp;\_&nbsp;&nbsp;__&nbsp;\&nbsp;\__&nbsp;&nbsp;\&nbsp;|&nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;\_&nbsp;&nbsp;__&nbsp;\__&nbsp;&nbsp;\&nbsp;&nbsp;<br>
+						\&nbsp;&nbsp;\__(&nbsp;&nbsp;<_>&nbsp;)&nbsp;/_/&nbsp;|&nbsp;|&nbsp;&nbsp;||&nbsp;&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;\&nbsp;&nbsp;\___&nbsp;/&nbsp;__&nbsp;\_/&nbsp;/_/&nbsp;(&nbsp;&nbsp;<_>&nbsp;)&nbsp;&nbsp;|&nbsp;\/&nbsp;&nbsp;/&nbsp;__&nbsp;\|&nbsp;&nbsp;|_|&nbsp;&nbsp;|&nbsp;&nbsp;/|&nbsp;&nbsp;|&nbsp;\//&nbsp;__&nbsp;\_<br>
+						&nbsp;\___&nbsp;&nbsp;>____/\____&nbsp;|&nbsp;|__||__|&nbsp;&nbsp;|__|\___&nbsp;&nbsp;>____&nbsp;&nbsp;/\____&nbsp;|\____/|__|&nbsp;&nbsp;&nbsp;&nbsp;(____&nbsp;&nbsp;/____/____/&nbsp;|__|&nbsp;&nbsp;(____&nbsp;&nbsp;/<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;<br>
+     				</h3>
 
+					<label for="encoder" class="labelCode" >Escreva o texto para ser codificado:</label>
+					<textarea id="TextoCodificador" name="encoder" rows="4" cols="50" class="ExchangeArea"></textarea>
+					<div id="TextoCodificadoFinal" class='invisible'>
+						<h4>SEU TEXTO CODIFICADO</h4>
+						<textarea name="encodedText" class="AlvoRespostaCodigo" id="AlvoRespostaCodigo"></textarea>
+
+					</div>
+					<button type="button" name="BtnCodificar" class="MenuButton ProgramaButton" id="BtnCodificar">CODIFICAR  </button>
+					<div class="copiar invisible"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnCopiar" id="BtnCodificarCopiar" >-->COPIAR</button>
+					<div class="fechar"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnFecharCodificador" id="BtnFecharCodificador" >x FECHAR</button>
+				</section>
 			</main>
 			<script type="text/javascript" src="js/scripts.js"></script>
 		</body>
