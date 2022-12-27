@@ -41,8 +41,8 @@
 					<br> LOGIN: ADMIN
 					<br> PASSWORD: ************
 				<p>ESCOLHA UM PROGRAMA:</p>
-				<button type="button" id="clickDecoder" class="MenuButton" name="codificador"> *Codificador</button>
-				<a id="MenuDecoder" class="MenuButton"> *Decodificador</a>
+				<button type="button" id="clickEncoder" class="MenuButton" name="codificador"> *Codificador</button>
+				<button type="button" id="clickDecoder" class="MenuButton" name="decodificador"> *Decodificador</button>
 
 			</div>
 			<main id="decoderMain">
@@ -69,7 +69,7 @@
 					Dec 19 10:09:53 svar systemd[1733]: Startup finished in 158ms.<br>
 					Dec 19 10:09:57 svar systemd[1733]: Created slice User Core Session Slice.<br>
 					Dec 19 10:09:57 svar systemd[1733]: Starting D-Bus User Message Bus...<br>
-					Dec 19 10:09:57 svar systemd[1733]: Started D-Bus User Message Bus.<br>
+					<!-- Dec 19 10:09:57 svar systemd[1733]: Started D-Bus User Message Bus.<br>
 					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.3' (uid=1000 pid=1857 comm="/usr/bin/python /usr/bin/blueman-manager")<br>
 					Dec 19 10:09:58 svar systemd[1733]: Starting Accessibility services bus...<br>
 					Dec 19 10:09:58 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Successfully activated service 'org.a11y.Bus'<br>
@@ -159,7 +159,7 @@
 					Dec 19 12:20:00 svar fcron[49027]: Job '/home/tarhuntas/scripts/email' started for user tarhuntas (pid 49028)<br>
 					Dec 19 12:21:02 svar fcron[49027]: Job '/home/tarhuntas/scripts/email' completed (mailing output)<br>
 					Dec 19 12:21:02 svar fcron[49027]: fcron child aborted: this does not affect the main fcron daemon, but this may prevent a job from being run or an email from being sent.<br>
-					Dec 19 12:23:46 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating service name='org.freedesktop.Notifications' requested by ':1.34' (uid=1000 pid=51008 comm="/usr/lib/brave-bin/brave --enable-crashpad")<br>
+					Dec 19 12:23:46 svar dbus-daemon[1825]: [session uid=1000 pid=1825] Activating service name='org.freedesktop.Notifications' requested by ':1.34' (uid=1000 pid=51008 comm="/usr/lib/brave-bin/brave --enable-crashpad")<br> -->
 				</div><!-- end of dump -->
 				
 				<section id="codificadorPrograma" class="invisible textshadow">
@@ -172,7 +172,7 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;<br>
      				</h3>
 
-					<label for="encoder" class="labelCode" >Escreva o texto para ser codificado:</label>
+					<label for="encoder" class="labelCode" >Escreva o texto para ser codificado (o programa irá normalizar seu texto):</label>
 					<textarea id="TextoCodificador" name="encoder" rows="4" cols="50" class="ExchangeArea"></textarea>
 					<div id="TextoCodificadoFinal" class='invisible'>
 						<h4>SEU TEXTO CODIFICADO</h4>
@@ -180,8 +180,29 @@
 
 					</div>
 					<button type="button" name="BtnCodificar" class="MenuButton ProgramaButton" id="BtnCodificar">CODIFICAR  </button>
-					<div class="copiar invisible"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnCopiar" id="BtnCodificarCopiar" >-->COPIAR</button></div>
+					<div class="copiar invisible" id="copiarCodificarWrap"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnCopiar" id="BtnCodificarCopiar" >-->COPIAR</button></div>
 					<div class="fechar"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnFecharCodificador" id="BtnFecharCodificador" >x FECHAR</button>
+				</section>
+				<section id="decodificadorPrograma" class="invisible textshadow">
+					<h3 class="asciiChar">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.___.__&nbsp;&nbsp;_____.__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.___&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.__&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+						&nbsp;&nbsp;____&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;__|&nbsp;_/|__|/&nbsp;____\__|&nbsp;____&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__|&nbsp;_/___________&nbsp;&nbsp;_____&nbsp;&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;__&nbsp;______________&nbsp;&nbsp;&nbsp;<br>
+						_/&nbsp;___\/&nbsp;&nbsp;_&nbsp;\&nbsp;/&nbsp;__&nbsp;|&nbsp;|&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;__\|&nbsp;&nbsp;|/&nbsp;___\\__&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;/&nbsp;__&nbsp;|/&nbsp;&nbsp;_&nbsp;\_&nbsp;&nbsp;__&nbsp;\&nbsp;\__&nbsp;&nbsp;\&nbsp;|&nbsp;&nbsp;|&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;\_&nbsp;&nbsp;__&nbsp;\__&nbsp;&nbsp;\&nbsp;&nbsp;<br>
+						\&nbsp;&nbsp;\__(&nbsp;&nbsp;<_>&nbsp;)&nbsp;/_/&nbsp;|&nbsp;|&nbsp;&nbsp;||&nbsp;&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;\&nbsp;&nbsp;\___&nbsp;/&nbsp;__&nbsp;\_/&nbsp;/_/&nbsp;(&nbsp;&nbsp;<_>&nbsp;)&nbsp;&nbsp;|&nbsp;\/&nbsp;&nbsp;/&nbsp;__&nbsp;\|&nbsp;&nbsp;|_|&nbsp;&nbsp;|&nbsp;&nbsp;/|&nbsp;&nbsp;|&nbsp;\//&nbsp;__&nbsp;\_<br>
+						&nbsp;\___&nbsp;&nbsp;>____/\____&nbsp;|&nbsp;|__||__|&nbsp;&nbsp;|__|\___&nbsp;&nbsp;>____&nbsp;&nbsp;/\____&nbsp;|\____/|__|&nbsp;&nbsp;&nbsp;&nbsp;(____&nbsp;&nbsp;/____/____/&nbsp;|__|&nbsp;&nbsp;(____&nbsp;&nbsp;/<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;<br>
+     				</h3>
+
+					<label for="dencoder" class="labelCode" >Escreva o texto para ser decodificado (o programa irá normalizar seu texto):</label>
+					<textarea id="TextoDeCodificador" name="decoder" rows="4" cols="50" class="ExchangeArea"></textarea>
+					<div id="TextoDeCodificadoFinal" class='invisible'>
+						<h4>SEU TEXTO DECODIFICADO</h4>
+						<textarea name="decodedText" class="AlvoRespostaCodigo" id="AlvoRespostaDeCodigo"></textarea>
+
+					</div>
+					<button type="button" name="BtnDeCodificar" class="MenuButton ProgramaButton" id="BtnDeCodificar">DECODIFICAR  </button>
+					<div class="copiar invisible" id="copiarDeCodificarWrap"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnCopiar" id="BtnDeCodificarCopiar" >-->COPIAR</button></div>
+					<div class="fechar"><button type="button" name="BtnCodificarCopiar" class="MenuButton ProgramaButton BtnFecharCodificador" id="BtnFecharDeCodificador" >x FECHAR</button>
 				</section>
 			</main>
 			<script type="text/javascript" src="js/scripts.js"></script>

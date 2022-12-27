@@ -68,7 +68,7 @@ h3.asciiChar {
 	font-size: 1.5em;
 }
 
-#codificadorPrograma {
+#codificadorPrograma, #decodificadorPrograma {
 	top:0;
 	width:80%;
 	height: 80%;
@@ -89,7 +89,7 @@ h3.asciiChar {
 	font-size: 1.5em;
 	display: block;
 }
-#TextoCodificador {
+#TextoCodificador, #TextoDeCodificador {
 	height: 20%;
 	width: 100%;
 	border: solid white 3px;
@@ -104,7 +104,7 @@ h3.asciiChar {
 		outline-width: 2px;
 		outline-offset: 0;
 	}
-	textArea#AlvoRespostaCodigo {
+	textArea#AlvoRespostaCodigo, textArea#AlvoRespostaDeCodigo {
 		font-size: 1.5em;
 		width: 100%;
 		border: dashed; white 3px;
