@@ -146,7 +146,9 @@ function fecharPrograma () {
 	element.innerHTML = "";
 	alvoRespostaCodigo[index].value = "";
 	textoFinal.value="";
-	textoFinal.setAttribute("class", "visible textofinal");
+	textoFinal.setAttribute("class", "invisible textofinal");
+	textoFinal2.value="";
+	textoFinal2.setAttribute("class", "invisible textofinal");
 	programaSelecao.setAttribute("class","invisible");
 	a = document.getElementsByClassName("visible copiar");
 	a[0].setAttribute("class","copiar invisible");
