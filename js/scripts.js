@@ -21,7 +21,7 @@ var item = content.split(splits);
 var linhas  = item.length;
 element.innerHTML = "";
 var programa;
-var scrollTempo= 1; //aqui seleciona o tempo do scroll
+var scrollTempo= 300; //aqui seleciona o tempo do scroll
 var programaSelecao;
 var a;
 
