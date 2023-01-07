@@ -258,7 +258,7 @@ ref:http://aleclownes.com/2017/02/01/crt-display.html
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 991px) {
   /* For mobile phones: */
  
  html {
