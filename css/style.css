@@ -22,6 +22,15 @@ h1.aluraAscii {
 	margin: 0;
 	padding: 0;
 }
+a {
+	color: green;
+	text-decoration: none;
+}
+	a:hover {
+		background: white;
+		color:black;
+	}
+
 #dump {
 	font-size:2em;
 }
@@ -29,9 +38,11 @@ h1.aluraAscii {
 	
 	float: left;
 	padding: 1em;
-	font-size: 1.7em;
-
+	font-size: 2em;
 }
+	#bootInfo p {
+		margin: 0;
+		}
 main{
 	clear:left;
 }
@@ -62,6 +73,13 @@ textarea {
 	.MenuButton:hover::before {
 		content:">";
 	}
+/********************** titulos ascii */
+.palavraAscii {
+	float: left;
+}
+
+
+
 
 /*programas *********************/
 h3.asciiChar {
@@ -78,6 +96,7 @@ h3.asciiChar {
 	background: green;
 	color: white;
 	padding: 40px;
+	overflow-y: scroll;
 }
 .invisible {
 	display:none;
@@ -119,7 +138,9 @@ h3.asciiChar {
 	display: inline-block;
 }
 
-
+.labelCode {
+	clear: left;
+}
 
 /*scan lines 
 ref:http://aleclownes.com/2017/02/01/crt-display.html
@@ -237,3 +258,4 @@ ref:http://aleclownes.com/2017/02/01/crt-display.html
 		display: none;
 	}
 }
+

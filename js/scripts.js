@@ -1,5 +1,6 @@
 const date = new Date().toJSON();
 console.log(date); // Fri Jun 17 2022 11:27:28 GMT+0100 (British Summer Time)
+//data atual quando a página é carregada.
 
 const dateTarget = document.getElementById ("data");
 dateTarget.innerHTML = date;
@@ -10,7 +11,8 @@ var element = document.getElementById("encoder");
 MenuDecoder.onclick = bubble;
 MenuEncoder.onclick = bubble;
 
-
+//emula o dump de um terminal com um tempo aleatorio de scroll
+//remove o html da página para um array, escreve uma linha por vez de volta no dom
 var n = 0;
 var element = document.getElementById('dump');
 var content = element.innerText;
@@ -19,7 +21,7 @@ var item = content.split(splits);
 var linhas  = item.length;
 element.innerHTML = "";
 var programa;
-var scrollTempo= 300;
+var scrollTempo= 1; //aqui seleciona o tempo do scroll
 var programaSelecao;
 var a;
 
@@ -29,7 +31,8 @@ function escreve () {
 }
 
 
-
+//faz um loop pela lista do dump, chamando a função de escrever uma linha por vez. 
+//escapa o loop quando acaba o dump e carrega um "programa"
 function loop() {
     var rand = Math.round(Math.random()*scrollTempo);
     let i = setTimeout(function() {
@@ -43,9 +46,12 @@ function loop() {
         	console.log(programaSelecao)
         	programaSelecao.setAttribute("class","visible textshadow");      	
         }
-    }, rand);
+    }, rand);//chama a função em um tempo aleatório para simular um terminal mais realístico
+
 }
 
+//funcao que "carrega" um programa - pega o nome do botão que foi clicado e passa como parm
+//chama a funcao loop que escreve o texto do dump na tela.
 function bubble (event) {
 	element.innerHTML = "";
 	n=0;
@@ -53,6 +59,7 @@ function bubble (event) {
 	programa= event.target.getAttribute('name')
 	loop();
 }
+
 
 var index = 0;
 //pega o click no botão e inicializa uma função sem nome
@@ -65,7 +72,13 @@ button1.onclick = function (){
 	//pega o valor do input como variavel
 	let textoOriginal = document.getElementById("TextoCodificador");
 	let str = textoOriginal.value; 
+	//Limpa a string dos caracteres especiais:
+	//normalize() -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+	//NFD -> Canonical decomposition - https://en.wikipedia.org/wiki/Unicode_equivalence#Sources_of_equivalence
+	//replace() -> todo o unicode de acentos (regex buscando todos as marcacoes diacríticas) https://en.wikipedia.org/wiki/Combining_Diacritical_Marks
+	//toLowerCase -> converte para lowercase 
 	let cleanStr = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+	//buraco do coelho: https://unicode.org/reports/tr15/
 	textoOriginal.value = cleanStr;
 
 	index = 0;
@@ -95,11 +108,18 @@ var btnCopiar2 = document.getElementById("BtnDeCodificarCopiar")
 btnCopiar.onclick = copiar;
 btnCopiar2.onclick = copiar;
 
+//botão de decodificar
 button2.onclick = function (){
 	//pega o valor do input como variavel
 	let textoOriginal = document.getElementById("TextoDeCodificador");
 	let str = textoOriginal.value; 
+	//Limpa a string dos caracteres especiais:
+	//normalize() -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+	//NFD -> Canonical decomposition - https://en.wikipedia.org/wiki/Unicode_equivalence#Sources_of_equivalence
+	//replace() -> todo o unicode de acentos (regex buscando todos as marcacoes diacríticas) https://en.wikipedia.org/wiki/Combining_Diacritical_Marks
+	//toLowerCase -> converte para lowercase 
 	let cleanStr = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+	
 	textoOriginal.value = cleanStr;
 
 	index = 1;
@@ -120,28 +140,25 @@ button2.onclick = function (){
 
 
 function copiar() {
-  // Get the text field
-  
-
-  // Select the text field
+  // pega o texto de acordo com qual programa está ativo
   alvoRespostaCodigo[index].select();
-  alvoRespostaCodigo[index].setSelectionRange(0, 99999); // For mobile devices
+  alvoRespostaCodigo[index].setSelectionRange(0, 99999); // para compatibilidade com celulares
 
-   // Copy the text inside the text field
+   // copia o texto dentro da caixa utilizando o método de escrever o conteúdo no clipboard.
+  //https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
   navigator.clipboard.writeText(alvoRespostaCodigo[index].value);
-
-  // Alert the copied text
-  
-}
+	}
 
 
 
-
+//botoes de "fechar" os programas
 buttonFecharCodificar = document.getElementById("BtnFecharCodificador");
 buttonFecharDeCodificar = document.getElementById("BtnFecharDeCodificador");
 buttonFecharCodificar.onclick = fecharPrograma;
 buttonFecharDeCodificar.onclick = fecharPrograma;
 
+//função que "fecha" o programa. 
+//altera visibilidade de alguns divs, limpa o dump, reseta variáveis.
 function fecharPrograma () {
 	element.innerHTML = "";
 	alvoRespostaCodigo[index].value = "";
