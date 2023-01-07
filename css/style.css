@@ -1,6 +1,6 @@
 /**style **/
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-html {padding: 0; margin: 0}
+html {padding: 0; margin: 0; font-size: 20px;}
 body {
 	padding: 0;
 	margin: 0;
@@ -32,13 +32,13 @@ a {
 	}
 
 #dump {
-	font-size:2em;
+	font-size:2rem;
 }
 #bootInfo{
 	
 	float: left;
-	padding: 1em;
-	font-size: 2em;
+	padding: 1rem;
+	font-size: 2rem;
 }
 	#bootInfo p {
 		margin: 0;
@@ -77,14 +77,12 @@ textarea {
 .palavraAscii {
 	float: left;
 }
-
-
-
-
-/*programas *********************/
 h3.asciiChar {
 	font-size: 1.5em;
 }
+
+/*programas *********************/
+
 
 #codificadorPrograma, #decodificadorPrograma {
 	top:0;
@@ -179,6 +177,7 @@ ref:http://aleclownes.com/2017/02/01/crt-display.html
 .textshadow {
     animation: textShadow 1.6s infinite;
 }
+/*keyframes da animacao ******************/
 
 @keyframes textShadow {
   0% {
@@ -259,3 +258,22 @@ ref:http://aleclownes.com/2017/02/01/crt-display.html
 	}
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ 
+ html {
+	font-size: 24px;
+}
+ 
+.ProgramaButton {
+	font-size: 3rem;
+	margin: 5px 0 10px 0;
+}
+h1.aluraAscii{
+    font-size: 5.6vw;
+}
+h3.asciiChar {
+	font-size: 1rem;
+}
+
+}
